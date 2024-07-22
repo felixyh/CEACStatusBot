@@ -16,6 +16,7 @@ class NotificationManager():
 
     def send(self,) -> None:
         res = query_status(self.__location, self.__number, self.__passport_number, self.__surname, self.__captchaHandle)
+        print(f"Response from query_status: {res}")
 
         if res['status'] == "Refused":
             import os,pytz,datetime
